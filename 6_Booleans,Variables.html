@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Q1
+    let hour = 13;
+    const myName = "Monson";
+
+    // Q2
+    if (hour >= 6 && hour <= 12) {
+      console.log(`Good Morning ${myName}`);
+    } else if (hour >= 13 && hour <= 17) {
+      console.log(`Good Afternoon ${myName}`);
+    } else {
+      console.log(`Good Night ${myName}`);
+    }
+
+    // Q3
+    const randomNumber = Math.random();
+    // Q4 and 5
+    let result;
+    // Q6
+    const guess = "heads"
+    if (randomNumber < 0.5) {
+      console.log("heads");
+      result = "heads";
+    } else {
+      console.log("tails");
+      result = "tails";
+    }
+    if (guess === result) {
+      console.log("You win!");
+    } else {
+      console.log("You lose!");
+    }
+
+    // Q7
+    guess === result ? console.log("You win!") : console.log("You lose!");
+
+    let quantity = 0;
+  </script>
+
+  <!-- Q8 -->
+  <button onclick="
+  quantity += 4; 
+  if (quantity > 10) {
+    quantity -= 4;
+    console.log('The cart is full')
+  }else{
+    console.log(quantity);
+  }
+  ">+4</button>
+  <button onclick="
+  quantity += 5
+  if (quantity > 10) {
+    quantity -= 4;
+    console.log('The cart is full')
+  }else{
+    console.log(quantity);
+  }
+  ">+5</button>
+  <!-- Q9 -->
+  <button onclick="
+  quantity--;
+  if (quantity < 0) {
+    quantity++;
+    console.log('Not enough items in the cart')
+  }else{
+    console.log(quantity);
+  }
+  ">Remove from Cart</button>
+
+  <button onclick="
+  quantity -= 2;
+  if (quantity < 0) {
+    quantity += 2;
+    console.log('Not enough items in the cart')
+  }else{
+    console.log(quantity);
+  }
+   ">-2</button>
+  <button onclick="
+  quantity -= 3;
+  if (quantity < 0) {
+    quantity += 3;
+    console.log('Not enough items in the cart')
+  }else{
+    console.log(quantity);
+  }
+  ">-3</button>
+</body>
+
+</html>
