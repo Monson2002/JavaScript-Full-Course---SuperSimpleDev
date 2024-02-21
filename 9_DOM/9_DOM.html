@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>9a</button>
+  <button class="btn-9b">9b</button>
+
+  <!-- Q3 -->
+  <button class="js-btn1" id="heads"
+    onclick="document.querySelector('.js-para1').innerHTML = 'You chose : Heads'">Heads</button>
+  <button class="js-btn2" id="tails"
+    onclick="document.querySelector('.js-para1').innerHTML = 'You chose : Tails'">Tails</button>
+  <p class="js-para1"></p>
+
+  <!-- Q4, Q5, Q6-->
+  <input type="text" name="name" id="name" placeholder="Name" onkeydown="handleEnter()">
+  <button onclick="submitButton(id)">Submit</button>
+  <p id="afterName"></p>
+
+  <script>
+    // Q1
+    console.log(document.querySelector('button'));
+
+    // Q2
+    document.querySelector('.btn-9b').innerHTML = '9b-done';
+
+    // Q3
+    const btnElem1 = document.querySelector('.js-btn1');
+    const btnElem2 = document.querySelector('.js-btn2');
+
+    // Q4
+    function submitButton(params) {
+      document.querySelector('#afterName').innerHTML = `Your name is ${document.querySelector('#name').value}`
+    }
+
+    // Q6
+    function handleEnter(event) {
+      if (event.key === 'Enter') {
+        submitButton();
+      }
+    }
+  </script>
+</body>
+
+</html>

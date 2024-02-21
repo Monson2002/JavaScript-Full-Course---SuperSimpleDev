@@ -1,0 +1,39 @@
+<!-- Q11 , Q12-->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">Tails</button>
+
+    <script>
+      const score = {
+        wins: 0,
+        losses: 0
+      }
+      localStorage.setItem("score", JSON.stringify(score));
+      function playGame(params) {
+        let guess;
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+        if (params === "heads") {
+          guess = "heads";
+        }else{
+          guess = "tails"
+        }
+        if (guess === result) {
+          console.log("You win!");
+          score.wins++;
+          console.log(score);
+          localStorage.setItem("score", JSON.stringify(score));
+        } else {
+          console.log("You lose!");
+          score.losses++;
+          console.log(score);
+          localStorage.setItem("score", JSON.stringify(score));
+        }
+        localStorage.getItem("score")
+      }
+    </script>
+  </body>
+</html>
