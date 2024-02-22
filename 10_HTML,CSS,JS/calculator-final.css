@@ -1,0 +1,34 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+.btn{
+  font-size: large;
+  background-color: rgb(83, 77, 77);
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  border: 0px solid rgb(83, 77, 77);
+  color: white;
+  margin: 0px;
+}
+#clear{
+  font-size: small;
+}
+.btn-right{
+  font-size: large;
+  background-color: rgb(254, 160, 10);
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  border: 0px solid rgb(254, 160, 10);
+  color: white;
+  margin: 0px;
+}
+#calculation{
+  margin: 20px;
+  color: aliceblue;
+  height: 40px;
+  font-size: x-large;
+}

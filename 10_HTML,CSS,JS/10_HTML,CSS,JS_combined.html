@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Q1,2 */
+    #btn-amazon{
+      background-color: rgb(255, 216, 20);
+      padding: 4px;
+      padding-left: 28px;
+      padding-right: 28px;
+      border: 0px solid black;
+      border-radius: 50px;
+    }
+    #btn-uber{
+      background-color: black;
+      color: white;
+      padding: 8px;
+      border: 0px solid black;
+      border-radius: 6px;
+    }
+    #btn-uber-later{
+      background-color: aliceblue;
+      color: black;
+      padding: 8px;
+      border: 0px solid aliceblue;
+      border-radius:61px;
+    }
+    .toggle-btn{
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn-amazon">Add to Cart</button>
+
+  <button id="btn-uber">Request now</button>
+  <button id="btn-uber-later">Schedule for later</button>
+
+  <!-- Q3 -->
+  <button class="js-button"></button>
+
+  <!-- Q4 -->
+  <button id="btn-toggle1" class="" onclick="toggle(1)">Gaming</button>
+
+  <!-- Q5 -->
+  <button id="btn-toggle2" class="" onclick="toggle(2)">Gaming</button>
+  <button id="btn-toggle3" class="" onclick="toggle(3)">Gaming</button>
+
+  <script>
+    console.log(document.querySelector('.js-button').classList.contains('js-button'));
+
+    function toggle(params) {
+      if (document.querySelector(`#btn-toggle${params}`).classList.contains('toggle-btn')) {
+        document.querySelector(`#btn-toggle${params}`).classList.remove('toggle-btn')   
+      }else{
+        let index = 1;
+        while (index <= 3) {
+          document.querySelector(`#btn-toggle${params}`).classList.remove('toggle-btn'); 
+          index += 1;
+        }
+        document.querySelector(`#btn-toggle${params}`).classList.add('toggle-btn')
+      }
+    }
+  </script>
+</body>
+</html>
